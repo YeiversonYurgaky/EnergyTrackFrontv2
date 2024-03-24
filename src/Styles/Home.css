@@ -1,0 +1,11 @@
+.bg-gradient-custom {
+  background: linear-gradient(90deg, #10b981 0%, #3b82f6 50%, #fbbf24 100%);
+}
+
+.text-shadow {
+  text-shadow: 0 0 80px #87ffb380, 0 0 80px #7580ff80;
+}
+
+.articulo p {
+  margin: 2rem 0 0 0 !important;
+}
