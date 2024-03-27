@@ -1,12 +1,12 @@
 import React from "react";
 import HomeContent from "../Components/HomeContent";
-import Navbard from "../Components/Navbard";
+import Navbar from "../Components/Navbar";
 
 const NavbarPage = () => {
   return (
     <>
       <header>
-        <Navbard />
+        <Navbar />
       </header>
       <section>
         <HomeContent />

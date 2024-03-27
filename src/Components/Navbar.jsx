@@ -3,6 +3,11 @@ import logo from "../assets/logo.svg";
 
 const Navbard = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const navbarClasses = `navbar bg-base-100 text-zinc-900 ${
+    isScrolled
+      ? "fixed top-0 inset-x-0 z-50 shadow bg-transparent backdrop-blur-xl"
+      : "bg-transparent transition-colors duration-300 ease-in-out"
+  }`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +28,7 @@ const Navbard = () => {
   }, []);
 
   return (
-    <div className="navbar bg-base-100 text-zinc-900 {`navbar ${isScrolled ? 'bg-gray-900' : 'bg-transparent'} transition-colors duration-300 ease-in-out`}">
+    <div className={navbarClasses}>
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -47,13 +52,13 @@ const Navbard = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] text-base p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <a href="#home">Home</a>
             </li>
             <li>
-              <a>Nosotros</a>
+              <a href="#nosotros">Nosotros</a>
             </li>
             <li>
-              <a>Contáctanos</a>
+              <a href="#contacto">Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -65,18 +70,20 @@ const Navbard = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-base px-1">
           <li>
-            <a>Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a>Nosotros</a>
+            <a href="#nosotros">Nosotros</a>
           </li>
           <li>
-            <a>Contáctanos</a>
+            <a href="#contacto">Contáctanos</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-active text-base w-36">Ingresar</a>
+        <a className="btn btn-neutral text-neutral-100 text-base w-36">
+          Ingresar
+        </a>
       </div>
     </div>
   );

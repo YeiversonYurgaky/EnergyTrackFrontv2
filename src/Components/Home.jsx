@@ -4,7 +4,7 @@ import tablas from "../assets/tablas.png";
 
 const Home = () => {
   return (
-    <main className="flex m-6 text-neutral-500 font-light">
+    <main className="flex h-screen m-5 justify-center">
       <section className="flex flex-col flex-1 ">
         <article className="articulo prose lg:prose-xl ">
           <h1>
@@ -20,13 +20,17 @@ const Home = () => {
             <p>a un solo click</p>
           </h1>
         </article>
-        <article className="text-xl mt-5">
+        <article className="text-xl mt-5 text-neutral-500 font-light">
           <p>podras ver sus consumos diarios</p>
           <p> en tablas y graficas para mejor comprensión</p>
         </article>
       </section>
-      <section className="flex flex-1  origin-center">
-        <img className="flex shadow-md rotate-6" src={tablas} alt="tablas" />
+      <section className="flex flex-1 z-10 mr-5 ">
+        <img
+          className="flex shadow-md rotate-6 items-center mt-9 h-[26.875rem]"
+          src={tablas}
+          alt="tablas"
+        />
       </section>
     </main>
   );
