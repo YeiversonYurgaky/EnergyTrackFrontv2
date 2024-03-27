@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 
 const Navbard = () => {
+
+  //Navbar dinámica
   const [isScrolled, setIsScrolled] = useState(false);
   const navbarClasses = `navbar bg-base-100 text-zinc-900 ${
     isScrolled
@@ -27,6 +29,26 @@ const Navbard = () => {
     };
   }, []);
 
+  //navegación singlepage
+  // function handleNavClick(event, targetId) {
+  //   event.preventDefault();
+  
+  //   const targetElement = document.getElementById(targetId);
+  //   if (targetElement) {
+  //     let yOffset = 0; // Desplazamiento predeterminado     
+  //     if (targetId === "nosotros") {
+  //       yOffset = -100 // Ajuste de desplazamiento para la sección "Nosotros"
+  //     } if (targetId === "contacto") {
+  //       yOffset = -200 // Ajuste de desplazamiento para la sección "Contacto"
+  //     }
+  //     console.log(yOffset)
+  
+  //     const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+  //     window.scrollTo({ top: y, behavior: "smooth" });
+  //   }
+  // }
+
   return (
     <div className={navbarClasses}>
       <div className="navbar-start">
@@ -51,14 +73,14 @@ const Navbard = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] text-base p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            <li id="home">
               <a href="#home">Home</a>
             </li>
-            <li>
-              <a href="#nosotros">Nosotros</a>
+            <li id="nosotros">
+              <a  href="#nosotros" >Nosotros</a>
             </li>
-            <li>
-              <a href="#contacto">Contáctanos</a>
+            <li id="contacto">
+              <a  href="#contacto" >Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -69,14 +91,14 @@ const Navbard = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-base px-1">
-          <li>
+          <li id="home">
             <a href="#home">Home</a>
           </li>
-          <li>
+          <li id="nosotros">
             <a href="#nosotros">Nosotros</a>
           </li>
-          <li>
-            <a href="#contacto">Contáctanos</a>
+          <li id="contacto">
+            <a  href="#contacto">Contáctanos</a>
           </li>
         </ul>
       </div>

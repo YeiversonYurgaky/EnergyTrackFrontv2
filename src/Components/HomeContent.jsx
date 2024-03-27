@@ -6,7 +6,7 @@ import Nosotros from "./Nosotros";
 const HomeContent = () => {
   return (
     <>
-      <div id="home">
+      <div>
         <Home />
       </div>
       <div>

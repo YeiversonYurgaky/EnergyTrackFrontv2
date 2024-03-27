@@ -8,14 +8,9 @@ const Contacto = () => {
         <section className="flex flex-col md:flex-row md:items-center">
           <div className="md:w-1/2">
             <header className="prose lg:prose-xl mb-4 ">
-              <h1 className="text-center">Contacto</h1>
+              <h1>Contacto</h1>
             </header>
             <body className="prose lg:prose-lg">
-              <p>
-                ¡Estamos encantados de saber de ti! Si tienes alguna pregunta,
-                comentario o simplemente quieres saber más sobre nuestros
-                servicios, no dudes en ponerte en contacto con nosotros.
-              </p>
               <p>
                 Puedes encontrarnos en la siguiente dirección:
                 <br />
@@ -31,7 +26,7 @@ const Contacto = () => {
             </body>
           </div>
           <div className="md:w-1/2 ml-8">
-            <picture>
+            <picture className="flex justify-center">
               <img
                 src={contacto}
                 alt="imagen de contacto"

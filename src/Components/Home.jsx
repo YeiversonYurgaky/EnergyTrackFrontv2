@@ -25,12 +25,14 @@ const Home = () => {
           <p> en tablas y graficas para mejor comprensión</p>
         </article>
       </section>
-      <section className="flex flex-1 z-10 mr-5 ">
+      <section className="flex flex-1 z-10 mr-5">
+        <picture className="flex justify-center">
         <img
           className="flex shadow-md rotate-6 items-center mt-9 h-[26.875rem]"
           src={tablas}
           alt="tablas"
         />
+        </picture>
       </section>
     </main>
   );
