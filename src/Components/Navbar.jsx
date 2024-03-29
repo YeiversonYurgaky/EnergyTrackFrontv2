@@ -5,11 +5,10 @@ const Navbard = () => {
 
   //Navbar dinámica
   const [isScrolled, setIsScrolled] = useState(false);
-  const navbarClasses = `navbar bg-base-100 text-zinc-900 ${
-    isScrolled
-      ? "fixed top-0 inset-x-0 z-50 shadow bg-transparent backdrop-blur-xl"
-      : "bg-transparent transition-colors duration-300 ease-in-out"
-  }`;
+  const navbarClasses = `navbar bg-base-100 text-zinc-900 ${isScrolled
+    ? "fixed top-0 inset-x-0 z-50 shadow bg-transparent backdrop-blur-xl"
+    : "bg-transparent transition-colors duration-300 ease-in-out"
+    }`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +31,7 @@ const Navbard = () => {
   //navegación singlepage
   // function handleNavClick(event, targetId) {
   //   event.preventDefault();
-  
+
   //   const targetElement = document.getElementById(targetId);
   //   if (targetElement) {
   //     let yOffset = 0; // Desplazamiento predeterminado     
@@ -42,9 +41,9 @@ const Navbard = () => {
   //       yOffset = -200 // Ajuste de desplazamiento para la sección "Contacto"
   //     }
   //     console.log(yOffset)
-  
+
   //     const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
-  
+
   //     window.scrollTo({ top: y, behavior: "smooth" });
   //   }
   // }
@@ -77,10 +76,10 @@ const Navbard = () => {
               <a href="#home">Home</a>
             </li>
             <li id="nosotros">
-              <a  href="#nosotros" >Nosotros</a>
+              <a href="#nosotros" >Nosotros</a>
             </li>
             <li id="contacto">
-              <a  href="#contacto" >Contáctanos</a>
+              <a href="#contacto" >Contáctanos</a>
             </li>
           </ul>
         </div>
@@ -98,7 +97,7 @@ const Navbard = () => {
             <a href="#nosotros">Nosotros</a>
           </li>
           <li id="contacto">
-            <a  href="#contacto">Contáctanos</a>
+            <a href="#contacto">Contáctanos</a>
           </li>
         </ul>
       </div>
